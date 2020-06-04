@@ -1,0 +1,40 @@
+/* pages/Playlist/index.wxss */
+page{
+  height: 100%;
+}
+.container{
+  background-color: rgb(44, 44, 44);
+  overflow: hidden;
+}
+.container .item{
+  display: flex;
+  font-size: 12px;
+  padding: 12px;
+  align-items: center;
+  border-bottom:1rpx solid rgb(55, 55, 55)
+}
+.container .item .number{
+  font-size: 24px;
+  font-weight: 700;
+  color:white
+}
+.container .item .info {
+  flex:1;
+  margin-left: 20px;
+  font-size: 30rpx;
+  color: white;
+}
+.info .music_title{
+  display: block;
+  font-size: 14px;
+  padding-bottom: 5px;
+  color: rgb(253, 149, 0)
+}
+.container .item .heat {
+  color: white;
+  margin-right: 25rpx;
+}
+.container .item image {
+  width: 40px;
+  height: 40px;
+}

@@ -1,0 +1,35 @@
+/* pages/hostSingList/hostSingList.wxss */
+page{
+  height: 100%;
+}
+.image{
+  height:185px;
+  width:100%;
+  display: block;
+}
+.songList{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(34, 34, 34);
+  padding: 30px 40px;
+  color: #fff;
+}
+.songList .item{
+  /* border-bottom: 1px solid #fff; */
+  margin-top:20px;
+}
+.songList .item:first-child{
+  margin-top: 0px;
+}
+.songList .singer{
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  word-break: keep-all;
+  text-overflow: ellipsis;
+  color:rgb(94, 94, 94);
+  /* padding: 16px 0; */
+  height: 32px;
+  line-height: 32px;
+}

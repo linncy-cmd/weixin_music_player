@@ -1,0 +1,114 @@
+<!--pages/home/index.wxml-->
+<view class="container">
+<!-- 头部导航 -->
+  <view class="topNav">
+      <view class="item active">
+          <text>个性推荐</text>
+      </view>
+       <view class="item">
+           <navigator url="../Playlist/index" hover-class="navigator-hover">歌单</navigator>
+      </view>
+       <view class="item">
+          <text>主播电台</text>
+      </view>
+       <view class="item">
+          <text>排行版</text>
+      </view>
+  </view>
+  <!-- 推荐歌单容器 -->
+  <scroll-view scroll-y="true" class="mainBody">
+      <view class="logo">
+        <image src="../../images/slide.png"></image>
+      </view>
+      <view class="poster">
+        <view class="item">
+          <image src="../../images/04.png"></image>
+          <view class="poster_info">
+            <text>私人FM</text>
+          </view>
+        </view>
+        <view class="item">
+          <image src="../../images/05.png"></image>
+          <view class="poster_info">
+            <text>私人FM</text>
+          </view>
+        </view>
+        <view class="item">
+          <image src="../../images/06.png"></image>
+          <view class="poster_info">
+            <text>私人FM</text>
+          </view>
+        </view>
+      </view>
+      <view class="list">
+        <view class="title"> 
+            <image src="../../images/home_04_03.jpg"></image>
+            <view class="title_left">
+                <text>推荐歌单</text>
+            </view>
+            <view class="title_right">
+              <text>更多</text>
+            </view> 
+            <image src="../../images/home_05_03.jpg" style="margin-left:5px"></image>
+        </view>
+        <!-- 推荐歌单 -->
+        <view class="list_body">
+            <!-- 具体某一个歌单 点击跳转 -->
+            <view class="item" wx:for='{{songList}}' wx:key="item" bindtap="toHostSingPage">
+                  <view class="icon">
+                    <image lazy-load src="{{item.picUrl}}" class="image"  data-groupId='{{item.id}}' />
+                  </view>
+                  <view class="text"  data-groupId='{{item.listenCount}}'>
+                    <view class="songName" wx:for='{{item.songList}}' wx:for-item = 'item2' wx:for-index = 'index2' wx:key="item2" >
+                      <text class="name" style="margin-right:20px"  data-groupId='{{item.id}}'>{{index2 + 1}}</text>
+                      <text class="desc" data-groupId='{{item.id}}'>{{item2.songname}}-{{item2.singername}}</text>
+                    </view>
+                  </view>
+            </view>
+        </view>
+        <!-- ----------------- -->
+      </view>
+  </scroll-view>
+  <!-- 页脚区域 -->
+  <view class="footer">
+    <view class="logo_left">
+    <navigator url="../item/item?isMusicPlay={{isMusicPlay}}"><image src="{{song.poster}}" bindtap="audioPause"></image></navigator>
+    </view>
+    <view class="info">
+    <text class="music_title">{{song.title}}</text>
+    <view class="music_author" wx:for='{{song.author}}' wx:key="index">
+       <text wx:if='{{index != song.author.length -1}}'>{{item}}/</text>
+       <text wx:else>{{item.name}}</text>
+    </view>
+    </view>
+    <view class="logo_right">
+    <image src="../../images/01.png" catchtap="showSonglist"></image>
+    <image src="{{isMusicPlay ? '../../images/pause.png':'../../images/02.png'}}" catchtap="audioPlay"></image>
+    <image src="../../images/03.png"></image>
+    </view>
+  </view>
+      <!-- 歌单列表 -->
+    <scroll-view class="palyerList" scroll-y wx:if='{{!isClose}}'>
+      <view class="listTitle">
+        播放列表（{{musicList.length}}）
+      </view>
+      <view class="item" wx:for='{{musicList}}' wx:key='index'>
+         <view class="song_singer">
+            <text class="list_song">{{item.selectsongTitle}}-</text>
+            <view class="list_singer">
+               <text wx:for='{{item.selectsingername}}' wx:for-item='item2' wx:key='item2.name' wx:for-index='index2'>
+                    <text wx:if='{{index2 != item.selectsingername.length - 1}}'>{{item2.name}}/</text>
+                    <text wx:else>{{item2.name}}</text>
+               </text>  
+            </view>
+         </view>
+         <view class="list_img">
+           <image src="{{currentIndex == item.index && isMusicPlay ? '../item/playing.gif':''}}" class="player_img"></image>
+         </view>
+      </view>
+    </scroll-view>
+    <!-- 关闭歌单 -->
+    <view class="close" catchtap="closeSongList" wx:if='{{!isClose}}'>
+           关闭
+    </view>
+</view>

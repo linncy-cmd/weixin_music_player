@@ -1,0 +1,36 @@
+{
+  "pages":[
+    "pages/home/index",
+    "pages/Playlist/index",
+    "pages/item/item",
+    "pages/logs/logs",
+    "pages/hostSingList/hostSingList"
+  ],
+  "window":{
+    "usingComponents": {},
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "Music Player",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+      "backgroundColor": "#111214",
+      "color": "#fff",
+      "list": [
+        {
+          "pagePath": "pages/home/index",
+          "text":"首页",
+          "iconPath":"./static/image/home-1.png",
+          "selectedIconPath":"./static/image/home-2.png"
+        },
+        {
+          "pagePath": "pages/item/item",
+          "text":"正在播放",
+          "iconPath":"./static/image/rank-1.png",
+          "selectedIconPath":"./static/image/rank-2.png"
+        }
+      ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

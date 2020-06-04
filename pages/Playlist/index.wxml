@@ -1,0 +1,123 @@
+<!--pages/Playlist/index.wxml-->
+<scroll-view class="container" scroll-y>
+  <view class="item"> 
+      <text class="number">001</text>
+      <view class="info">
+           <text class="music_title">合久必分</text>
+           <text class="music_author">陈婉琪</text>
+      </view>
+      <!-- 热度 -->
+      <text class="heat">342</text>
+      <image src="../../images/logo_03.jpg"></image>
+  </view>
+  <view class="item"> 
+      <text class="number">001</text>
+      <view class="info">
+           <text class="music_title">合久必分</text>
+           <text class="music_author">陈婉琪</text>
+      </view>
+      <!-- 热度 -->
+      <text class="heat">342</text>
+      <image src="../../images/logo_03.jpg"></image>
+  </view>
+  <view class="item"> 
+      <text class="number">001</text>
+      <view class="info">
+           <text class="music_title">合久必分</text>
+           <text class="music_author">陈婉琪</text>
+      </view>
+      <!-- 热度 -->
+      <text class="heat">342</text>
+      <image src="../../images/logo_03.jpg"></image>
+  </view>
+  <view class="item"> 
+      <text class="number">001</text>
+      <view class="info">
+           <text class="music_title">合久必分</text>
+           <text class="music_author">陈婉琪</text>
+      </view>
+      <!-- 热度 -->
+      <text class="heat">342</text>
+      <image src="../../images/logo_03.jpg"></image>
+  </view>
+  <view class="item"> 
+      <text class="number">001</text>
+      <view class="info">
+           <text class="music_title">合久必分</text>
+           <text class="music_author">陈婉琪</text>
+      </view>
+      <!-- 热度 -->
+      <text class="heat">342</text>
+      <image src="../../images/logo_03.jpg"></image>
+  </view>
+  <view class="item"> 
+      <text class="number">001</text>
+      <view class="info">
+           <text class="music_title">合久必分</text>
+           <text class="music_author">陈婉琪</text>
+      </view>
+      <!-- 热度 -->
+      <text class="heat">342</text>
+      <image src="../../images/logo_03.jpg"></image>
+  </view>
+    <view class="item"> 
+      <text class="number">001</text>
+      <view class="info">
+           <text class="music_title">合久必分</text>
+           <text class="music_author">陈婉琪</text>
+      </view>
+      <!-- 热度 -->
+      <text class="heat">342</text>
+      <image src="../../images/logo_03.jpg"></image>
+  </view>
+  <view class="item"> 
+      <text class="number">001</text>
+      <view class="info">
+           <text class="music_title">合久必分</text>
+           <text class="music_author">陈婉琪</text>
+      </view>
+      <!-- 热度 -->
+      <text class="heat">342</text>
+      <image src="../../images/logo_03.jpg"></image>
+  </view>
+  <view class="item"> 
+      <text class="number">001</text>
+      <view class="info">
+           <text class="music_title">合久必分</text>
+           <text class="music_author">陈婉琪</text>
+      </view>
+      <!-- 热度 -->
+      <text class="heat">342</text>
+      <image src="../../images/logo_03.jpg"></image>
+  </view>
+  <view class="item"> 
+      <text class="number">001</text>
+      <view class="info">
+           <text class="music_title">合久必分</text>
+           <text class="music_author">陈婉琪</text>
+      </view>
+      <!-- 热度 -->
+      <text class="heat">342</text>
+      <image src="../../images/logo_03.jpg"></image>
+  </view>
+  <view class="item"> 
+      <text class="number">001</text>
+      <view class="info">
+           <text class="music_title">合久必分</text>
+           <text class="music_author">陈婉琪</text>
+      </view>
+      <!-- 热度 -->
+      <text class="heat">342</text>
+      <image src="../../images/logo_03.jpg"></image>
+  </view>
+  <view class="item"> 
+      <text class="number">001</text>
+      <view class="info">
+           <text class="music_title">合久必分</text>
+           <text class="music_author">陈婉琪</text>
+      </view>
+      <!-- 热度 -->
+      <text class="heat">342</text>
+      <image src="../../images/logo_03.jpg"></image>
+  </view>
+</scroll-view>

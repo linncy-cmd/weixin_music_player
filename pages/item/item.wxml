@@ -1,0 +1,57 @@
+<!--pages/item/item.wxml-->
+<view class="container">
+    <!-- 歌单列表 -->
+    <scroll-view class="palyerList" scroll-y wx:if='{{!isClose}}'>
+      <view class="listTitle">
+        播放列表（{{musicList.length}}）
+      </view>
+      <view class="item" wx:for='{{musicList}}' wx:key='index' catchtap="toggleSong" data-song_obj='{{item}}'>
+         <view class="song_singer">
+            <text class="list_song">{{item.selectsongTitle}}-</text>
+            <view class="list_singer">
+               <text wx:for='{{item.selectsingername}}' wx:for-item='item2' wx:key='item2' wx:for-index='index2'>
+                    <text wx:if='{{index2 != item.selectsingername.length - 1}}'>{{item2.name}}/</text>
+                    <text wx:else>{{item2.name}}</text>
+               </text>  
+            </view>
+         </view>
+         <view class="list_img">
+           <image src="{{currentIndex == item.index && isMusicPlay ? './playing.gif':''}}" class="player_img"></image>
+         </view>
+      </view>
+    </scroll-view>
+    <!-- 关闭歌单 -->
+     <view class="close" catchtap="closeSongList" wx:if='{{!isClose}}'>
+            关闭
+     </view>
+    <view class="logo">
+        <image src="{{picUrl}}"></image>
+    </view>
+    <view class="lyric">
+        <view class="title">{{title}}</view>
+        <view class="author">
+            <view wx:for='{{author}}' wx:key='index'>
+                 <text  wx:if='{{index != author.length -1}}'>{{item.name}}/</text>
+                 <text wx:else>{{item.name}}</text>
+            </view>
+        </view>
+        <view class="lyric_contaner">
+        </view>
+    </view>
+    <view class="progress" wx:if='{{duration != 0}}'>
+        <text class="timer_l">{{currentTime}}</text>
+        <view class="progress-box">
+        <progress style="width:{{percent}}%" color="#10AEFF" active stroke-width="6" />
+        </view>
+        <text class="timer_r">{{duration}}</text>
+    </view>
+    <!-- 底部导航 -->
+    <view class="footer">
+        <!-- <image src=""></image> -->
+       <icon class="iconfont icon-ziyuan {{loop ? ' active' : ''}}" catchtap="setLoop"></icon>
+       <icon class="iconfont icon-kuaijin1"  catchtap="nextIndex" data-index='-1'></icon>
+       <icon class="iconfont {{isMusicPlay ? ' icon-bofang' : ' icon-bofang1'}}" catchtap="audioPlay"></icon>
+       <icon class="iconfont icon-kuaijin" catchtap="nextIndex" data-index='1'></icon>
+       <icon class="iconfont icon-SongListgedan" catchtap="showSonglist"></icon>
+    </view>
+</view>

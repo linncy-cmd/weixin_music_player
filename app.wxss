@@ -1,0 +1,60 @@
+/**app.wxss**/
+@import './static/stylesheet.wxss';
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  box-sizing: border-box;
+}
+/* 播放歌单列表 */
+.palyerList{
+  position: absolute;
+  top:360rpx;
+  background-color:rgba(0,0,0,0.7);
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+.palyerList .listTitle,.container .close{
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  overflow: hidden;
+  border-bottom:1rpx solid #fff
+}
+.container .close {
+  padding: 20px 0;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0,0,0,0.7);
+  bottom: 0px;
+  border:0px;
+  z-index: 2;
+}
+.palyerList .item {
+  display: flex;
+  width: 90%;
+  padding: 10px 0;
+  margin: 0 auto;
+  border-bottom: 1rpx dashed #fff;
+  color: #fff;
+}
+.palyerList .item .song_singer{
+  width: 95%;
+}
+.palyerList .item .list_song,.palyerList .item .list_singer{
+  display: inline-block;
+  width: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+  white-space: nowrap;
+}
+.palyerList .item .player_img{
+  width: 15px;
+  height: 15px;
+}

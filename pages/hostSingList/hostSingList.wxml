@@ -1,0 +1,18 @@
+<!--pages/hostSingList/hostSingList.wxml-->
+<view class="container">
+    <view class="logo">
+        <image src='{{logoSrc}}' class="image"></image>
+    </view>
+    <scroll-view class="songList" scroll-y>
+        <view class="item" wx:for='{{songList}}' wx:key='index'  bindtap="toPlaylist"  data-songInfo="{{item.data}}" data-index='{{index}}'>
+            <view class="songName">{{item.data.songname}}</view>
+            <view class="singer">
+                <view wx:for='{{item.data.singer}}' wx:for-item='item2' wx:for-index='index2' wx:key='item2'>
+                 <text  wx:if='{{index2 != item.data.singer.length -1}}'>{{item2.name}}/</text>
+                 <text wx:else>{{item2.name}}</text>
+                </view>
+                <text>-{{item.data.songname}}</text>
+            </view>
+        </view>
+    </scroll-view>
+</view>
